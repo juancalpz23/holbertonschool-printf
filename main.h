@@ -10,7 +10,9 @@ typedef struct format
 {
 	char *ft;
 	int (*f)(va_list);
-} ft_st;
+}
+
+ft_st;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
