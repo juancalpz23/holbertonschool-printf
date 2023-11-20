@@ -1,0 +1,58 @@
+.TH _printf 3 "November 2023" "Version 1.0" "User Commands"
+
+.SH NAME
+_printf \- format and print data
+
+.SH SYNOPSIS
+.B #include <stdio.h>
+.B #include <stdarg.h>
+.B int printf(const char *format, ...);
+
+.SH DESCRIPTION
+The \fB_printf\fR function sends formatted output to the standard output (stdout). The function 
+converts, formats, and prints the arguments under the control of the format.
+
+.PP
+The \fB_printf\fR function formats and prints the optional arguments under the control 
+of the format string. The format string is a character string that may contain 
+conversion specifications.
+
+.PP
+A conversion specification is introduced by the '%' character. After the '%', zero or 
+more of the following flags and field width specifiers can appear in this order:
+
+.PP
+\fB%c\fR - Character
+.PP
+\fB%d\fR - Signed decimal integer
+.PP
+\fB%s\fR - String of characters
+.PP
+... (add more as needed)
+
+.SH RETURN VALUE
+Upon successful return, these functions return the number of characters printed 
+(excluding the null byte used to end output to strings).
+
+.SH EXAMPLES
+The following example demonstrates the usage of \fB_printf\fR:
+
+.B #include <stdio.h>
+.B int main() {
+.B   _printf("Hello, %s!\n", "world");
+.B   return 0;
+.B }
+
+.SH SEE ALSO
+.B f_printf(3), s_printf(3), v_printf(3)
+
+.SH BUGS
+This man page is not exhaustive, and additional details may be found in the 
+documentation or source code.
+
+.SH AUTHOR
+Written by Juan C. Lopez and Livan Hernandez.
+
+.SH COPYRIGHT
+This is free and unencumbered software released into the public domain.
+
