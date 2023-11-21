@@ -6,20 +6,12 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-typedef struct format
-{
-	char *ft;
-	int (*f)(va_list);
-}
-
-ft_st;
-
 int _printf(const char *format, ...);
-int _putchar(char c);
 int _strlen(char *s);
-int _pchar(char c);
-int _pstr(char *s);
-int _pint(int num);
-int _pdef(char c);
+int _char(char c);
+int _str(char *s);
+int _int(int num);
+int _def(char c);
+int _oct(unsigned int n);
 
 #endif
