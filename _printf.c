@@ -41,9 +41,6 @@ int _printf(const char *format, ...)
 			case 'd':
 				cnt += _int(va_arg(ap, int));
 				break;
-			case 'u':
-				cnt += _uns(va_arg(ap, int));
-			break;
 			default:
 				cnt += _def(format[i]);
 				i++;
