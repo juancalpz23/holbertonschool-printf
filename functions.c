@@ -1,7 +1,10 @@
 #include "main.h"
-/*e
- *_char - prints a char
- *@c: char to print
+#include <unistd.h>
+#include <stdarg.h>
+#include <stdio.h>
+/**
+ * _char - prints a char
+ * @c: char to print
  * Return: Char, 0 Success
  **/
 int _char(char c)
@@ -13,6 +16,21 @@ int _char(char c)
 	}
 	else
 	return (0);
+}
+/**
+ * _strlen - calculate the lenght of a string
+ * @s: integer used
+ * Return: returns the lenght of the string
+ **/
+int _strlen(char *s)
+{
+	int i, lenght = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		lenght++;
+	}
+	return (lenght);
 }
 /**
  * _str - Functions to print strings
@@ -38,9 +56,9 @@ int _str(char *s)
 		return (0);
 }
 /**
- * _def - Print %
+ * _def - Print default
  * @c: character to print
- * Return: % or Num Success
+ * Return: character
  **/
 int _def(char c)
 {
@@ -75,36 +93,27 @@ int _int(int num)
 	return (neg + c);
 }
 /**
- * _uns - prints an unsigned int
- * @n: variable to determine if unsigned
- * Return: Unsigned int
+ * _oct - Prints unsigned int in octal
+ * @n: NUmber to print
+ * Return: Characters printed
  **/
-int _uns(unsigned int n)
+int _oct(unsigned int n)
 {
-	int count = 0;
+	char bfr[20];
+	int i = 0, j;
 
-	do
+	if (n == 0)
 	{
-		char digit = '0' + n % 10;
-		write(1, &digit, 1);
-		n /= 10;
-		count++;
-	} 
-	while (n != 0);
-	return (count);
-}
-/**
- * _strlen - calculate the lenght of a string
- * @s: integer used
- * Return: returns the lenght of the string
- */
-int _strlen(char *s)
-{
-	int i, lenght = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		lenght++;
+		write (1, "0", 1);
 	}
-	return (lenght);
+	while (n != 0)
+	{
+		bfr[i++] = '0' + (n % 8);
+		n /= 8;
+	}
+	for (j = i - 1; j >= 0; j--)
+	{
+		write (1, &bfr[j], 1);
+	}
+	return (i);
 }
