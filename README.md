@@ -1,6 +1,6 @@
-# holbertonschool-printf
+### holbertonschool-printf
 
-Project Description
+## Project Description
 
 We made our own printf() function in this group project.
 
@@ -14,28 +14,40 @@ A conversion specifier is a character that specifies what type of conversion is 
 3. s: const char argument for pointer to a string not including NULL '\0'.
 4. %: no argument converted. % is written and the full specification is '%%".
 
-Functions
-int _pchar(char c)
-This function prints a character to the standar output stream.
+## Functions
+# int _char(char c)
+This function prints a character to the standar output stream (stdout).
 
-int _pstr(char *s)
-This functions prints a string to the standard output stream.
+# int _str(char *s)
+This functions prints a string to the standard output stream(stdout).
 
-int _pdef(char c)
-This functions prints % to the standard output stream.
+# int _def(char c)
+This functions prints % to the standard output stream (stdout).
 
-int _printf(const char *format, ...)
-This function contains everything that's gonna be printed to the standard output stream.
+# int _printf(const char *format, ...)
+This function contains everything that's gonna be printed to the standard output stream (stdout).
 
-Return Value
-If the return is succesfull, printf() function will return the number of characters printed without the NULL '\0' byte at the end of tha string. If the return is not succesfull or there is and error, the return will be a negative value.EEEEEEEE
+# int _int(int num)
+This function prints integers and decimals to the standard output stream (stdout).
 
-Project Files
+#int _strlen(char *s)
+This function prints the lenght of the string to the standard output stream (stdout).
+
+# int _uns(unsigned int n)
+This function prints an unsigned integer to the standard output stream (stdout).
+
+#int _oct(unsigned int n)
+This function prints an integer to the octal base to the standard output stream (stdout).
+
+## Return Value
+If the return is succesfull, printf() function will return the number of characters printed without the NULL '\0' byte at the end of tha string. If the return is not succesfull or there is and error, the return will be a negative value.
+
+## Project Files
 1. man_3_printf - functions man page.
 2. _printf.c -E contains the function for the output of the format.
 3. main.h - contains prototypes to be used.
 4. functions.c - contains all the functions we decided to use for this project.
 5. main.c - file that contains all the prints required for this project.
 
-Authors
+## Authors
 Juan C. Lopez and Livan A. Hernandez
