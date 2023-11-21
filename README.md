@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 This function contains everything that's gonna be printed to the standard output stream.
 
 Return Value
-If the return is succesfull, printf() function will return the number of characters printed without the NULL '\0' byte at the end of tha string. If the return is not succesfull or there is and error, the return will be a negative value.EEEEEEEE
+If the return is succesfull, printf() function will return the number of characters printed without the NULL '\0' byte at the end of tha string. If the return is not succesfull or there is and error, the return will be a negative value.
 
 Project Files
 1. man_3_printf - functions man page.
