@@ -46,9 +46,7 @@ int _printf(const char *format, ...)
 				cnt++;
 				break;
 			default:
-				_def(format[i - 1]);
-				cnt++;
-				i++;
+				cnt += _def(format[i]);
 				break;
 		}
 			} else
