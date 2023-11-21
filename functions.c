@@ -87,13 +87,13 @@ int _int(int num)
 	char n[10];
 	int i, c = 0, neg = 0;
 
-	if (num < 10)
+	if (num < 0)
 	{
 		write (1, "-", 1);
 		neg++;
 		num *= (-1);
 	}
-	for (i = 9; num != 0; i++)
+	for (i = 9; num != 0; i--)
 	{
 		n[i] = '0' + (num % 10);
 		num /= 10;
