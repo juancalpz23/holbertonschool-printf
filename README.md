@@ -15,7 +15,7 @@ A conversion specifier is a character that specifies what type of conversion is 
 4. %: no argument converted. % is written and the full specification is '%%".
 
 ## Functions
-#int _char(char c)
+### int _char(char c)
 This function prints a character to the standar output stream (stdout).
 
 #int _str(char *s)
