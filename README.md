@@ -15,28 +15,28 @@ A conversion specifier is a character that specifies what type of conversion is 
 4. %: no argument converted. % is written and the full specification is '%%".
 
 ## Functions
-# int _char(char c)
+### int _char(char c)
 This function prints a character to the standar output stream (stdout).
 
-# int _str(char *s)
+### int _str(char *s)
 This functions prints a string to the standard output stream(stdout).
 
-# int _def(char c)
+### int _def(char c)
 This functions prints % to the standard output stream (stdout).
 
-# int _printf(const char *format, ...)
+### int _printf(const char *format, ...)
 This function contains everything that's gonna be printed to the standard output stream (stdout).
 
-# int _int(int num)
+### int _int(int num)
 This function prints integers and decimals to the standard output stream (stdout).
 
-#int _strlen(char *s)
+### int _strlen(char *s)
 This function prints the lenght of the string to the standard output stream (stdout).
 
-# int _uns(unsigned int n)
+### int _uns(unsigned int n)
 This function prints an unsigned integer to the standard output stream (stdout).
 
-#int _oct(unsigned int n)
+### int _oct(unsigned int n)
 This function prints an integer to the octal base to the standard output stream (stdout).
 
 ## Return Value
