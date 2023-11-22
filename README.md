@@ -4,7 +4,7 @@
 
 We made our own printf() function in this group project.
 
-We decided to name our function "printf()", This function uses the output according to the format and write output to stdout (standard output stream.
+We decided to name our function "printf()", This function uses the output according to the format and write output to stdout (standard output stream).
 
 The format string is a char string. The format contains ordinary characters that are copied without change on the output stream with conversion specifications which results in fetching zero or more arguments.
 
@@ -33,11 +33,17 @@ This function prints integers and decimals to the standard output stream (stdout
 ### int _strlen(char *s)
 This function prints the lenght of the string to the standard output stream (stdout).
 
-### int _uns(unsigned int n)
+### int _uint(unsigned int n)
 This function prints an unsigned integer to the standard output stream (stdout).
 
 ### int _oct(unsigned int n)
 This function prints an integer to the octal base to the standard output stream (stdout).
+
+### int _hex(unsigned int n, int uppercase)
+This functions prints an hexadecimal integer to the standard output stream (stdout).
+
+### int _ptr(void *ptr)
+This function prints a memory address pointer to the standard output stream (stdout).
 
 ## Return Value
 If the return is succesfull, printf() function will return the number of characters printed without the NULL '\0' byte at the end of tha string. If the return is not succesfull or there is and error, the return will be a negative value.

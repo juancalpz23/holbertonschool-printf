@@ -45,6 +45,18 @@ int _printf(const char *format, ...)
 				cnt += _oct(va_arg(ap, unsigned int));
 				cnt++;
 				break;
+			case 'x':
+				cnt += _hex(va_arg(ap, unsigned int), 0);
+				break;
+			case 'X':
+				cnt += _hex(va_arg(ap, unsigned int), 1);
+				break;
+			case 'p':
+				cnt += _ptr(va_arg(ap, void *));
+				break;
+			case 'u':
+				cnt += _uint(va_arg(ap, unsigned int));
+				break;
 			default:
 				cnt += _def(format[i]);
 				break;

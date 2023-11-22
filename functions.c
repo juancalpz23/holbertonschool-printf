@@ -105,6 +105,26 @@ int _int(int num)
 }
 
 /**
+ * _uint - Prints unsigned integer
+ * @n: The unsigned integer
+ * Return: Number of characters
+ */
+int _uint(unsigned int n)
+{
+	int cnt = 0;
+	char dgts;
+
+	do {
+		dgts = '0' + n % 10;
+		write(1, &dgts, 1);
+		n /= 10;
+		cnt++;
+	} while (n != 0);
+
+	return cnt;
+}
+
+/**
  * _oct - Prints an unsigned integer in octal format.
  * @n: The unsigned integer to print
  * Return: The number of characters printed
@@ -128,4 +148,49 @@ int _oct(unsigned int n)
 		write (1, &bfr[j], 1);
 	}
 	return (i);
+}
+
+/**
+ * _hex - Prints hexadecimal number.
+ * @n: unsigned integer.
+ * @uppercase: 1 if the output should be uppercase, 0 otherwise.
+ * Return: number of characters.
+ */
+int _hex(unsigned int n, int uppercase)
+{
+	int cnt = 0, i = 0;
+	char hexchar[] = "0123456789abcdef", bfr[10];
+
+	if (uppercase)
+		hexchar[10] = 'A';
+
+	if (n == 0)
+		return write(1, "0",1);
+	
+	 while (n != 0)
+	 {
+		 bfr[i++] = hexchar[n % 16];
+		 n /= 16;
+	 	cnt++;
+	 }
+	for (i--; i >= 0; i--)
+		write(1, &(bfr[i]), 1);
+
+	return cnt;
+}
+
+/**
+ * _ptr - Prints an adress pointer
+ * @ptr: pointer to print.
+ * Return: adress.
+ */
+int _ptr(void *ptr)
+{
+	if (ptr == NULL)
+		return _str("(nil)");
+
+	write(1, "0", 1);
+	write(1, "x", 1);
+
+	return _hex((unsigned long)ptr, 0) + 2;
 }
