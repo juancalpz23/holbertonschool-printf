@@ -37,11 +37,9 @@ Upon successful return, these functions return the number of characters printed
 .SH EXAMPLES
 The following example demonstrates the usage of \fB_printf\fR:
 
-.B #include <stdio.h>
-.B int main() {
-.B   _printf("Hello, %s!\n", "world");
-.B   return 0;
-.B }
+.B   _printf "Hello, World! \\n"
+
+# Output: Hello World!
 
 .SH SEE ALSO
 .B f_printf(3), s_printf(3), v_printf(3)
