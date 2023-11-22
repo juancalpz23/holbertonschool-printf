@@ -62,7 +62,6 @@ int _str(char *s)
 	else
 		return (0);
 }
-
 /**
  * _def - Print %
  *
@@ -76,7 +75,6 @@ int _def(char c)
 	write(1, &c, 1);
 	return (2);
 }
-
 /**
  * _int - prints integers and decimals
  * @num: numbers to print
@@ -103,7 +101,6 @@ int _int(int num)
 	write (1, &n[i], c);
 	return (neg + c);
 }
-
 /**
  * _uint - Prints unsigned integer
  * @n: The unsigned integer
@@ -149,7 +146,6 @@ int _oct(unsigned int n)
 	}
 	return (i);
 }
-
 /**
  * _hex - Prints hexadecimal number.
  * @n: unsigned integer.
