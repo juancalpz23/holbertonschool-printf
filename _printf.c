@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 
 	va_start (ap, format);
+
 	if (format != NULL)
 	{
 		while (format[i])
@@ -35,7 +36,7 @@ int _printf(const char *format, ...)
 				write(1, &format[i], 1);
 				cnt++;
 				break;
-			case 'i':
+      case 'i':
 				cnt += _int(va_arg(ap, int));
 				break;
 			case 'd':
