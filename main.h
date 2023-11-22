@@ -12,7 +12,9 @@ int _char(char c);
 int _str(char *s);
 int _int(int num);
 int _def(char c);
-int _uns(unsigned int n);
+int _uint( unsigned int n);
 int _oct(unsigned int n);
+int _hex(unsigned int n, int uppercase);
+int _ptr(void *ptr);
 
 #endif

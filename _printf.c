@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * _printf - prints function
  * @format: variable used
  * Return: Always 0
@@ -9,7 +9,8 @@ int _printf(const char *format, ...)
 	int i = 0, cnt = 0, spc = 0;
 	va_list ap;
 
-	va_start(ap, format);
+	va_start (ap, format);
+
 	if (format != NULL)
 	{
 		while (format[i])
@@ -35,18 +36,33 @@ int _printf(const char *format, ...)
 				write(1, &format[i], 1);
 				cnt++;
 				break;
-			case 'i':
-				cnt +=  _int(va_arg(ap, int));
+      case 'i':
+				cnt += _int(va_arg(ap, int));
 				break;
 			case 'd':
 				cnt += _int(va_arg(ap, int));
 				break;
+			case 'o':
+				cnt += _oct(va_arg(ap, unsigned int));
+				cnt++;
+				break;
+			case 'x':
+				cnt += _hex(va_arg(ap, unsigned int), 0);
+				break;
+			case 'X':
+				cnt += _hex(va_arg(ap, unsigned int), 1);
+				break;
+			case 'p':
+				cnt += _ptr(va_arg(ap, void *));
+				break;
+			case 'u':
+				cnt += _uint(va_arg(ap, unsigned int));
+				break;
 			default:
 				cnt += _def(format[i]);
-				i++;
 				break;
 		}
-			}else
+			} else
 			{
 				write(1, &format[i], 1);
 				cnt++;
