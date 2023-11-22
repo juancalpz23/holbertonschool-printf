@@ -1,10 +1,10 @@
-### holbertonschool-printf
+### _PRINTF
 
 ## Project Description
 
-We made our own printf() function in this group project.
+We made our own _printf() function in this group project.
 
-We decided to name our function "printf()", This function uses the output according to the format and write output to stdout (standard output stream).
+We decided to name our function "_printf()", This function uses the output according to the format and write output to stdout (standard output stream).
 
 The format string is a char string. The format contains ordinary characters that are copied without change on the output stream with conversion specifications which results in fetching zero or more arguments.
 
@@ -46,7 +46,7 @@ This functions prints an hexadecimal integer to the standard output stream (stdo
 This function prints a memory address pointer to the standard output stream (stdout).
 
 ## Return Value
-If the return is succesfull, printf() function will return the number of characters printed without the NULL '\0' byte at the end of tha string. If the return is not succesfull or there is and error, the return will be a negative value.
+If the return is succesfull, _printf() function will return the number of characters printed without the NULL '\0' byte at the end of tha string. If the return is not succesfull or there is and error, the return will be a negative value.
 
 ## Project Files
 1. man_3_printf - functions man page.
